@@ -6,9 +6,17 @@
 </head>
 <body>
     <script type="text/javascript" src="Actions/Search.php"></script> 
-    <form name="inputISBN" action="Actions/Search.php" method="get">
+    <form name="inputISBN" action="Actions/Search.php" method="post">
         <input type="text" value="InputISBN">
-        <input type="submit" value="提交">
+        <input type="submit">
     </form>
+
+    <form action="welcome.php" method="post">
+        Name: <input type="text" name="name"><br>
+        E-mail: <input type="text" name="email"><br>
+        <input type="submit">
+    </form>
+
+    <p> hello </p>
 </body>
 </html>

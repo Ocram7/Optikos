@@ -5,4 +5,5 @@ p{
 input:hover{
     border: 2px solid #777777;
     border-radius:5px;
+    background-color:#123812;
 }

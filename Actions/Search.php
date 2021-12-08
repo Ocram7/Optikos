@@ -1,3 +1,14 @@
+<html>
+    <body>
 <?php
-echo "hello world";
+function display()
+{
+echo "hello";
+}
+if(isset($_POST['submit']))
+{
+   display();
+}
 ?>
+</body>
+</html>
