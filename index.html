@@ -1,22 +1,39 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title> test title </title>
     <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script name="hiding_buttons" type="text/javascript">
+        $(document).ready(function(){
+            $("bookinfo").fadeOut();
+            $("button#HL").click(function(){
+                var txt=$("#ISBNin").val();
+                $("#isbnout").html("<h1>"+txt+"</h1>")
+                $("bookinfo").fadeIn();
+        });
+        })
+    </script>
     <meta charset="UTF-8">
 </head>
 <body>
     <script type="text/javascript" src="Actions/Search.php"></script> 
+    <button id="HL">HiLight</button>
     <form name="inputISBN" action="Actions/Search.php" method="post">
-        <input type="text" value="InputISBN">
+        <input id="ISBNin"type="text" value="InputISBN">
         <input type="submit">
     </form>
-
+    <p id="Hi">Hi</p>
     <form action="welcome.php" method="post">
         Name: <input type="text" name="name"><br>
         E-mail: <input type="text" name="email"><br>
         <input type="submit">
     </form>
-
+    <div id="bookinfo">
+        ISBN:<h1 id="isbnout"></h1>
+        Name:<h1 id="Bookname"></h1>
+        Author:<h1 id="Author"></h1>
+    </div>
     <p> hello </p>
 </body>
 </html>
