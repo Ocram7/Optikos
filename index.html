@@ -6,13 +6,14 @@
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
     <script name="hiding_buttons" type="text/javascript">
         $(document).ready(function(){
+            //Better animation while loding required(Kevin:"FredGKD")
             $("#bookinfo").hide();
             $("button#HL").click(function(){
-                var txt=$("#ISBNin").val();
+                /*var txt=$("#ISBNin").val();
                 var apikey="378629f1700441cfb18b9317d06859c8"
                 $.get("https://api.ibook.tech/v1/book/isbn?isbn=+"+txt+"&uKey="+apikey,
                 function(data,status){
-                });
+                });*///API interface, Ajax study required
                 $("#bookinfo").fadeOut();
                 $("#isbnout").html("<h3>"+txt+"</h3>")
                 $("#bookinfo").fadeIn();
