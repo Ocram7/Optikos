@@ -6,11 +6,12 @@
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
     <script name="hiding_buttons" type="text/javascript">
         $(document).ready(function(){
-            $("bookinfo").fadeOut();
+            $("#bookinfo").hide();
             $("button#HL").click(function(){
                 var txt=$("#ISBNin").val();
-                $("#isbnout").html("<h1>"+txt+"</h1>")
-                $("bookinfo").fadeIn();
+                $("#bookinfo").fadeOut();
+                $("#isbnout").html("<h3>"+txt+"</h3>")
+                $("#bookinfo").fadeIn();
         });
         })
     </script>
@@ -30,9 +31,9 @@
         <input type="submit">
     </form>
     <div id="bookinfo">
-        ISBN:<h1 id="isbnout"></h1>
-        Name:<h1 id="Bookname"></h1>
-        Author:<h1 id="Author"></h1>
+        ISBN:<h3 id="isbnout"></h3>
+        Name:<h3 id="Bookname"></h3>
+        Author:<h3 id="Author"></h3>
     </div>
     <p> hello </p>
 </body>
