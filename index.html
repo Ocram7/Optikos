@@ -11,7 +11,8 @@
 
             $("#bookinfo").hide();
             $("button#HL").click(function(){
-                /*var txt=$("#ISBNin").val();
+                var txt=$("#ISBNin").val();
+                /*
                 var apikey="378629f1700441cfb18b9317d06859c8"
                 $.get("https://api.ibook.tech/v1/book/isbn?isbn=+"+txt+"&uKey="+apikey,
                 function(data,status){
@@ -33,13 +34,11 @@
         <input id="ISBNin"type="text" value="InputISBN">
         <input type="submit">
     </form>
-    <p id="Hi">Hi</p>
     <div id="bookinfo">
         ISBN:<h3 id="isbnout"></h3>
         Name:<h3 id="Bookname"></h3>
         Author:<h3 id="Author"></h3>
     </div>
-    <p> hello </p>
 </body>
 
 </html>
