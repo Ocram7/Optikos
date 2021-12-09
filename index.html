@@ -4,9 +4,11 @@
     <title> test title </title>
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
+
     <script name="hiding_buttons" type="text/javascript">
         $(document).ready(function(){
-            //Better animation while loding required(Kevin:"FredGKD")
+            //Better animation while loading required(Kevin:"FredGKD")
+
             $("#bookinfo").hide();
             $("button#HL").click(function(){
                 /*var txt=$("#ISBNin").val();
@@ -14,6 +16,7 @@
                 $.get("https://api.ibook.tech/v1/book/isbn?isbn=+"+txt+"&uKey="+apikey,
                 function(data,status){
                 });*///API interface, Ajax study required
+
                 $("#bookinfo").fadeOut();
                 $("#isbnout").html("<h3>"+txt+"</h3>")
                 $("#bookinfo").fadeIn();
@@ -22,6 +25,7 @@
     </script>
     <meta charset="UTF-8">
 </head>
+
 <body>
     <script type="text/javascript" src="Actions/Search.php"></script> 
     <button id="HL">HiLight</button>
@@ -37,4 +41,5 @@
     </div>
     <p> hello </p>
 </body>
+
 </html>
