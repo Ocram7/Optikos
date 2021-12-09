@@ -14,10 +14,9 @@
                 var txt=$("#ISBNin").val();
                 /*
                 var apikey="378629f1700441cfb18b9317d06859c8"
-                $.get("https://api.ibook.tech/v1/book/isbn?isbn=+"+txt+"&uKey="+apikey,
+                $.getJSON("https://api.ibook.tech/v1/book/isbn?isbn=+"+txt+"&uKey="+apikey,
                 function(data,status){
                 });*///API interface, Ajax study required
-
                 $("#bookinfo").fadeOut();
                 $("#isbnout").html("<h3>"+txt+"</h3>")
                 $("#bookinfo").fadeIn();
