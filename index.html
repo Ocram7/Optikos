@@ -7,18 +7,19 @@
 
     <script name="hiding_buttons" type="text/javascript">
         $(document).ready(function(){
-            //Better animation while loading required(Kevin:"FredGKD")
+            //Better animations while loading are required(Kevin:"FredGKD")
 
             $("#bookinfo").hide();
             $("button#HL").click(function(){
                 var txt=$("#ISBNin").val();
                 /*
                 var apikey="378629f1700441cfb18b9317d06859c8"
-                $.getJSON("https://api.ibook.tech/v1/book/isbn?isbn=+"+txt+"&uKey="+apikey,
+                $.getJSON("https://api.ibook.tech/v1/book/isbn?isbn=+"+txt+"&uKey="+apikey,a
                 function(data,status){
                 });*///API interface, Ajax study required
                 $("#bookinfo").fadeOut();
-                $("#isbnout").html("<h3>"+txt+"</h3>");
+                $("#bookinfo").animate()
+                $("#isbnout").html("<p>"+txt+"</p>");
                 $("#bookinfo").fadeIn();
         });
         })
