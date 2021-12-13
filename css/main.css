@@ -17,8 +17,8 @@ input:hover{
     padding: 1% 0;
     margin:15% auto;
     border-radius: 100%;
-    transition-property: transform,padding,border-radius,background-color;
-    transition-duration: 10s;
+    transition-property: width,transform,padding,border-radius,background-color;
+    transition-duration: 2s;
     transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -28,4 +28,8 @@ input:hover{
     width:200px;
     padding: 88px 0;
     border-radius: 0;
+}
+
+.change:focus{
+    background-color:#164a98;
 }
