@@ -33,3 +33,8 @@ input:hover{
 .change:focus{
     background-color:#164a98;
 }
+
+/* logo in header (temporary) - Marco */
+header img{
+    width:5%;
+}

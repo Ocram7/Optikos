@@ -1,0 +1,4 @@
+smallLogo.png is much smaller than Logo.png (in terms of file size).
+但是像素不高
+如果在网页上是小的图片的话就用smallLogo, 对loading 有帮助
+如果要用大logo with better resolution 的话 then go with Logo
