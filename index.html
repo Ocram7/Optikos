@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> test title </title>
+    
+    <!-- 我们需要一个中文名诶 -->
+    <title> Optikos </title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="Images/Logo/smallLogo.png">
+    
+    <!-- fontawesome.com, it's a CDN, 可以在这里找到挺多simplistic icons-->
+    <script src="https://kit.fontawesome.com/a5ea1a165b.js" crossorigin="anonymous"></script>
+
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
 
     <script name="hiding_buttons" type="text/javascript">
@@ -35,6 +42,27 @@
 </head>
 
 <body>
+
+    <header>
+        <!-- 暂时搞的一个placeholder logo, 到时候可以改 - Marco-->
+        <a href = "index.html"><img src = "Images/Logo/smallLogo.png" alt="Optikos Logo"></a>
+        <h1>
+            Optikos
+        </h1>
+        <nav>
+            <!-- 你们来帮我翻译吧，我就不了 - Marco -->
+            <a href="about.html">About Us</a>
+            <a href="donate.html"> Donate </a>
+            
+            <div class = "profile">
+                <i class = "fas fa-user"></i>
+                <a href="settings.html">个人信息</a>
+                <a href = "myBooks.html">我的图书</a>
+            </div>
+
+        </nav>
+    </header>
+
     <script type="text/javascript" src="Actions/Search.php"></script> 
     <button id="HL">Search</button>
     <form name="inputISBN" action="Actions/Search.php" method="post">
