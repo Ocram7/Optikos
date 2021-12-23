@@ -10,11 +10,18 @@
             //Better animations while loading are required(Kevin:"FredGKD")
 
             $("#bookinfo").hide();
+            $("button#HL").mouseenter(function(){
+                $("button#HL").animate({
+                    
+                })
+            }).mouseleave(function(){
+
+            });
             $("button#HL").click(function(){
                 var txt=$("#ISBNin").val();
                 /*
                 var apikey="378629f1700441cfb18b9317d06859c8"
-                $.getJSON("https://api.ibook.tech/v1/book/isbn?isbn=+"+txt+"&uKey="+apikey,a
+                $.getJSON("w
                 function(data,status){
                 });*///API interface, Ajax study required
                 $("#bookinfo").fadeOut();
