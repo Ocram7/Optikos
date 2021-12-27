@@ -44,7 +44,7 @@
 
     <header>
         <!-- 暂时搞的一个placeholder logo, 到时候可以改 - Marco-->
-        <a href = "index.html"><img src = "Images/Logo/smallLogo.png" alt="Optikos Logo"></a>
+        <a href = "index.html" id="home"><img src = "Images/Logo/smallLogo.png" alt="Optikos Logo"></a>
         <h1>
             Optikos
         </h1>
@@ -53,40 +53,45 @@
             <a href="about.html">About Us</a>
             <a href="donate.html"> Donate </a>
             
-            <div class = "profile">
-                <i class = "fas fa-user"></i>
-                <a href="settings.html">个人信息</a>
-                <a href = "myBooks.html">我的图书</a>
+            <div class = "profile" onmouseenter="profile()" onmouseleave="endProfile()">
+                <i class = "fas fa-user" id="profile"></i>
+                <a href="settings.html" id="settings">个人信息</a>
+                <a href="myBooks.html" id="myBooks">我的图书</a>
             </div>
 
         </nav>
     </header>
-
-    <script type="text/javascript" src="Actions/Search.php"></script> 
-    <button id="HL">Search</button>
-    <form class="centerForm" name="inputISBN" action="Actions/Search.php" method="post">
+    
+    <main>
+        <script type="text/javascript" src="Actions/Search.php"></script>
+        <button id="HL">Search</button>
+        <form class="centerForm" name="inputISBN" action="Actions/Search.php" method="post">
         
-        <select name="filter" onchange="formChange(this)">
-            <option value="bookName"> 书名 </option>
-            <option value="authorName"> 作者 </option>
-            <option value="genreName" selected> 体裁 </option>
-        </select>
-
-        <input id="bookSelect" type="text" placeholder="书名/作者">
-        <select id ="genreSelect" name="genreSelect" aria-placeholder="genre1">
-            <option value="genre1"> genre1 </option>
-            <option value="genre2">genre2</option>
-            <option value="genre3">genre3</option>
-        </select>
+            <select name="filter" onchange="formChange(this)">
+                <option value="bookName"> 书名 </option>
+                <option value="authorName"> 作者 </option>
+                <option value="genreName" selected> 类型 </option>
+            </select>
         
-        <button id="bookSearch" type="submit"><i class="fas fa-search"></i></button>
-
-    </form>
-    <div id="bookinfo">
-        ISBN:<h3 id="isbnout"></h3>
-        Name:<h3 id="Bookname"></h3>
-        Author:<h3 id="Author"></h3>
-    </div>
+            <input id="bookSelect" type="text" placeholder="书名/作者">
+            <select id="genreSelect" name="genreSelect" aria-placeholder="genre1">
+                <option value="genre1"> genre1 </option>
+                <option value="genre2">genre2</option>
+                <option value="genre3">genre3</option>
+            </select>
+        
+            <button id="bookSearch" type="submit"><i class="fas fa-search"></i></button>
+        
+        </form>
+        
+        
+        <div id="bookinfo">
+            ISBN:<h3 id="isbnout"></h3>
+            Name:<h3 id="Bookname"></h3>
+            Author:<h3 id="Author"></h3>
+        </div>
+    </main>
+    
     
 
     <!--
