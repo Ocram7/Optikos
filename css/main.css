@@ -8,7 +8,7 @@ main{
     margin:2%;
 }
 
-/* Adjusting nav bar sizing/ positioning */
+/* Adjusting nav bar sizing/ positioning (it's pretty messy, 发现我的css 还是菜的一批) (I feel like the translates probably aren't necessary but it was the easiest way I had to position the elements (that I know how to easily implememnt))*/
 
 header{
     position:relative;
