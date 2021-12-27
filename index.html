@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/a5ea1a165b.js" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
-
+    <script type="text/javascript" src="js/main.js"></script>
     <script name="hiding_buttons" type="text/javascript">
         $(document).ready(function(){
             //Better animations while loading are required(Kevin:"FredGKD")
@@ -64,18 +64,37 @@
 
     <script type="text/javascript" src="Actions/Search.php"></script> 
     <button id="HL">Search</button>
-    <form name="inputISBN" action="Actions/Search.php" method="post">
-        <input id="ISBNin"type="text" value="InputISBN">
-        <input type="submit">
+    <form class="centerForm" name="inputISBN" action="Actions/Search.php" method="post">
+        
+        <select name="filter" onchange="formChange(this)">
+            <option value="bookName"> 书名 </option>
+            <option value="authorName"> 作者 </option>
+            <option value="genreName" selected> 体裁 </option>
+        </select>
+
+        <input id="bookSelect" type="text" placeholder="书名/作者">
+        <select id ="genreSelect" name="genreSelect" aria-placeholder="genre1">
+            <option value="genre1"> genre1 </option>
+            <option value="genre2">genre2</option>
+            <option value="genre3">genre3</option>
+        </select>
+        
+        <button id="bookSearch" type="submit"><i class="fas fa-search"></i></button>
+
     </form>
     <div id="bookinfo">
         ISBN:<h3 id="isbnout"></h3>
         Name:<h3 id="Bookname"></h3>
         Author:<h3 id="Author"></h3>
     </div>
+    
+
+    <!--
     <div class="change" tabindex="1">
         (陀螺)
     </div>
+    -->
+
 </body>
 
 </html>
